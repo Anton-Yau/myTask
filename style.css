@@ -1,0 +1,39 @@
+h1 {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: none;
+}
+h2{
+  text-decoration: overline;
+}
+
+.header{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.container{
+  margin: auto;
+  width: 50%;
+  height: 60%;
+  padding: 30px;
+  border: 1px solid black;
+  font-family: sans-serif;
+  font-size: 14pt;
+  justify-content: center;
+
+}
+html, body {
+  height: 100%;
+  margin: 0px;
+  background: linear-gradient(rgb(255, 255, 255), rgb(172, 249, 255));
+}
