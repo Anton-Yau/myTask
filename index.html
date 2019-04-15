@@ -15,9 +15,20 @@
         <h2 id = "mydate"></h2>
     </div>
     <div class = "container">
-        <form>
-            Add to my list: <input type="text" id = "input_task" value="">
-            <input type="button" onclick="addTask()" value="Add" id = "add">
+        <form class = 'my-form'>
+            <div class="form-group">
+                <label>Task Name: </label>
+                <input type="text" id = "input_task" value="">
+            </div>
+            <div class="form-group">
+                <label>Due date:  </label>
+                <input type="date" id = "input_date" value="">
+            </div>
+            <div class="form-group">
+                    <label>Task Description: </label>
+                    <textarea id = "input_description" value=""></textarea>
+            </div>
+            <input type="button" class = "button" onclick="addTask()" value="Add" id = "add">
         </form>
         <div id="item-list"></div>
     </div>

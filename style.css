@@ -1,6 +1,11 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  background: linear-gradient(to right, #74ebd5, rgb(236, 236, 236));
+}
 h1 {
   font-family: Georgia, serif;
-  font-size: 40px;
+  font-size: 50px;
   letter-spacing: 0px;
   word-spacing: 0px;
   color: #000000;
@@ -12,26 +17,28 @@ h1 {
   text-align: center;
   width:800px; 
   margin:0 auto;
-
-}
-.weather{
-  float: left;
-  width: 20%;
+  
 }
 h2{
   text-decoration: overline;
+  font-size: 30px;
   text-align: center;
   width:800px; 
   margin:0 auto;
+  padding-top: 10px;
 }
 h3{
   position: relative;
   margin: auto;
 }
-.header{
-  padding: 10px;
-}
 
+.header{
+  padding: 20px;
+}
+.weather{
+  float: left;
+  width: 20%;
+}
 .container{
   margin: auto;
   width: 50%;
@@ -40,10 +47,25 @@ h3{
   font-family: sans-serif;
   font-size: 14pt;
   justify-content: center;
-
 }
-html, body {
-  height: 100%;
-  margin: 0px;
-  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+.button{
+  background-color:#333;
+  color:#fff;
+  padding:10px 15px;
+  border:none;
+}
+.my-form{
+  padding:20px;
+  width: 30%;
+}
+.my-form .form-group{
+  padding-bottom: 15px;
+}
+.my-form label{
+  display: block;
+}
+
+#input_date, #input_task, #input_description{
+  padding: 8px;
+  width: 100%;
 }
