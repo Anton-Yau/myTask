@@ -1,6 +1,3 @@
-function Task(taskName){
-  this.taskName = taskName;
-}
 let tasks = [];
 window.addEventListener('load', ()=>{
     let today = new Date();
@@ -12,6 +9,8 @@ window.addEventListener('load', ()=>{
     today = mm + '/' + dd + '/' + yyyy;
     document.getElementById('mydate').innerHTML = "Today's date is: " + today;
 })
+
+
 window.addEventListener('load', ()=>{
   let long;
   let lat;
@@ -29,15 +28,15 @@ window.addEventListener('load', ()=>{
         return response.json();
       })
       .then(data =>{
-        console.log(data);
-        const {temperature, summary} = data.currently;
-        tempDeg.textContent = temperature;
+        const {temperature, summary, icon} = data.currently;
+        tempDeg.textContent = "Weather: " + Math.round((temperature-32) * 5/9) + " °C";
         tempDes.textContent = summary;
+        //setIcon
+        setIcons(icon, document.getElementById('icon1'));
       });
     });
   }
 });
-
 
 document.getElementById("add").onclick = function() {
     let nHTML = '';
@@ -47,4 +46,12 @@ document.getElementById("add").onclick = function() {
       nHTML += '<li>' + item + '</li>' + `<button type="button">Delete</button>`;
     });
     document.getElementById("item-list").innerHTML = '<ul>' + nHTML + '</ul>'
+  }
+
+
+  function setIcons(icon, iconID){
+    const skycons = new Skycons({color:"black"});
+    const currentIcon = icon.replace(/-/g,"_").toUpperCase();
+    skycons.play();
+    return skycons.set(iconID, Skycons[currentIcon]);
   }
